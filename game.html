@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Game đoán số trong khoảng</h2>
+<input type="button" value="Start" onclick="start()">
+<script>
+    let begin = 0;
+    let end = 0;
+    let num = 0;
+    let check = 0;
+    let count = 0;
+
+
+    function start() {
+
+
+        do {
+            begin = Number(prompt("Nhập số bắt đầu"));
+            end = Number(prompt("Nhập số kết thúc"));
+            if (begin >= end) {
+                alert("Số nhập chưa đúng hãy nhập lại")
+            }
+
+        } while (begin >= end)
+        num = (begin + parseInt(Math.random() * (end - begin)));
+        console.log(num)
+        do {
+            check = Number(prompt("Đoán số"))
+            if (check == num) {
+                alert("Bạn đã chiến thắng")
+            }else if (check>num){
+                alert("Số cần tìm nhỏ hơn")
+            }else {
+                alert("Số cần tìm lớn hơn")
+            }
+
+            count++
+        } while (check != num && count < 3)
+        if (check != num && count == 3) {
+            alert("Bạn đã thua")
+            alert("Số cần tìm là:" + num)
+        }
+        count=0;
+    }
+
+
+</script>
+</body>
+</html>

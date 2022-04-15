@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="demo"> </h2>
+<script>
+    let doc="";
+    for (let i=1;i<=5;i++){
+        for (let j=0;j<i;j++){
+           doc=doc+"*"
+        }
+        doc=doc+"<br>"
+    }doc=doc+"<br>"
+    for (let i=0;i<=5;i++){
+        for (let j=5;j>i;j--){
+            doc=doc+"*"
+        }
+        doc=doc+"<br>"
+    }
+    for (let i=0;i<=5;i++){
+        for (let j=5;j>i;j--){
+            doc=doc+"&nbsp&nbsp"
+        }
+        for (let f=0;f<i;f++){
+            doc=doc+"*"
+        }
+        doc=doc+"<br>"
+    }doc=doc+"<br>"
+    for (let i=0;i<=5;i++){
+        for (let f=0;f<i;f++){
+            doc=doc+"&nbsp&nbsp"
+        }
+        for (let j=5;j>i;j--){
+            doc=doc+"*"
+        }
+
+        doc=doc+"<br>"
+    }
+
+ document.getElementById("demo").innerHTML=doc
+</script>
+</body>
+</html>

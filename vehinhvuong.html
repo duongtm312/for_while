@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="demo"> </h2>
+
+<script>
+    let height = +prompt("Nhập chiều dài");
+    let width = + prompt("Nhập chiều rộng")
+    let doc =""
+    for (let i=1;i<=height;i++){
+        for (let j=1;j<=width ;j++){
+            if (i==1||i==height||j==1||j==width){
+                doc=doc+"*"
+            }else {
+                doc=doc+"&nbsp&nbsp"}
+
+        }
+
+        doc=doc+"<br>"
+    }
+
+    document.getElementById("demo").innerHTML=doc
+</script>
+</body>
+</html>
